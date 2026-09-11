@@ -1,7 +1,7 @@
 # Session 6 & 7 — Docker
 
-**Name:** Sourabh Srivastva 
-**Enrollment Number:** 24BCS10157
+**Name:** Jatin Mangtani
+**Enrollment Number:** 24BCS10118
 
 ---
 
@@ -24,8 +24,8 @@ All six applications run on port **8080** on the host. Each has its own folder w
 
 ```bash
 cd nodejs-app
-docker build -t sourabh-nodejs-app .
-docker run -d -p 8080:8080 --name sourabh-node sourabh-nodejs-app
+docker build -t jatin-nodejs-app .
+docker run -d -p 8080:8080 --name jatin-node jatin-nodejs-app
 curl http://localhost:8080
 ```
 
@@ -39,8 +39,8 @@ Hello World from Node.js!
 
 ```bash
 cd python-app
-docker build -t sourabh-python-app .
-docker run -d -p 8080:8080 --name sourabh-python sourabh-python-app
+docker build -t jatin-python-app .
+docker run -d -p 8080:8080 --name jatin-python jatin-python-app
 curl http://localhost:8080
 ```
 
@@ -54,8 +54,8 @@ Hello World from Python Flask!
 
 ```bash
 cd java-app
-docker build -t sourabh-java-app .
-docker run -d -p 8080:8080 --name sourabh-java sourabh-java-app
+docker build -t jatin-java-app .
+docker run -d -p 8080:8080 --name jatin-java jatin-java-app
 curl http://localhost:8080
 ```
 
@@ -69,8 +69,8 @@ Hello World from Java!
 
 ```bash
 cd Apache-app
-docker build -t sourabh-apache-app .
-docker run -d -p 8080:80 --name sourabh-apache sourabh-apache-app
+docker build -t jatin-apache-app .
+docker run -d -p 8080:80 --name jatin-apache jatin-apache-app
 curl http://localhost:8080
 ```
 
@@ -84,8 +84,8 @@ curl http://localhost:8080
 
 ```bash
 cd React-app
-docker build -t sourabh-react-app .
-docker run -d -p 8080:80 --name sourabh-react sourabh-react-app
+docker build -t jatin-react-app .
+docker run -d -p 8080:80 --name jatin-react jatin-react-app
 ```
 
 React renders client-side — open `http://localhost:8080` in a browser to see **Hello World from React!**
@@ -96,8 +96,8 @@ React renders client-side — open `http://localhost:8080` in a browser to see *
 
 ```bash
 cd nginx-app
-docker build -t sourabh-nginx-app .
-docker run -d -p 8080:80 --name sourabh-nginx sourabh-nginx-app
+docker build -t jatin-nginx-app .
+docker run -d -p 8080:80 --name jatin-nginx jatin-nginx-app
 curl http://localhost:8080
 ```
 
@@ -111,8 +111,8 @@ curl http://localhost:8080
 
 ```text
 CONTAINER ID   IMAGE                  COMMAND                  CREATED         STATUS         PORTS                    NAMES
-a1b2c3d4e5f6   sourabh-nginx-app       "/docker-entrypoint.…"   2 minutes ago   Up 2 minutes   0.0.0.0:8080->80/tcp     sourabh-nginx
-b2c3d4e5f6a1   sourabh-react-app       "/docker-entrypoint.…"   3 minutes ago   Up 3 minutes   0.0.0.0:8080->80/tcp     sourabh-react
+a1b2c3d4e5f6   jatin-nginx-app       "/docker-entrypoint.…"   2 minutes ago   Up 2 minutes   0.0.0.0:8080->80/tcp     jatin-nginx
+b2c3d4e5f6a1   jatin-react-app       "/docker-entrypoint.…"   3 minutes ago   Up 3 minutes   0.0.0.0:8080->80/tcp     jatin-react
 ```
 
 ---
@@ -143,8 +143,8 @@ CMD ["node", "app.js"]
 
 ```bash
 cd multi-stage
-docker build -t sourabh-multistage .
-docker run -d -p 8080:3000 --name sourabh-ms sourabh-multistage
+docker build -t jatin-multistage .
+docker run -d -p 8080:3000 --name jatin-ms jatin-multistage
 curl http://localhost:8080
 ```
 
@@ -156,18 +156,18 @@ Hello World from Docker multi-stage build
 
 ```text
 CONTAINER ID   IMAGE               COMMAND       CREATED         STATUS         PORTS                    NAMES
-c3d4e5f6a1b2   sourabh-multistage   "node app.js" 30 seconds ago  Up 30 seconds  0.0.0.0:8080->3000/tcp   sourabh-ms
+c3d4e5f6a1b2   jatin-multistage   "node app.js" 30 seconds ago  Up 30 seconds  0.0.0.0:8080->3000/tcp   jatin-ms
 ```
 
 ### Image Size Comparison
 
 ```bash
-docker images | grep sourabh
+docker images | grep jatin
 ```
 
 ```text
 REPOSITORY          TAG       IMAGE ID       SIZE
-sourabh-multistage   latest    f1e2d3c4b5a6   178MB
+jatin-multistage   latest    f1e2d3c4b5a6   178MB
 ```
 
 Without multi-stage (single FROM node:20): ~1.1GB  
@@ -177,8 +177,8 @@ With multi-stage: ~178MB — **~6× smaller** because build tools stay in the bu
 
 ## Documentation
 
-**Name:** Sourabh Srivastva   
-**Enrollment Number:** 24BCS10157  
+**Name:** Jatin Mangtani 
+**Enrollment Number:** 24BCS10118  
 
 - Application runs on port 8080 (host) → 3000 (container)  
 - `Hello World from Docker multi-stage build` confirmed via `curl`  
