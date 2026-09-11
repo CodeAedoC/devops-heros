@@ -3,6 +3,11 @@ kind: Pod
 
 metadata:
   name: nginx-pod
+<<<<<<< HEAD
+=======
+  labels:
+    app: nginx
+>>>>>>> acdb203 (session 2 assignment)
 
 spec:
   containers:
